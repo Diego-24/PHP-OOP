@@ -82,6 +82,68 @@
 	$house1->color = "white";
 	$house1->state = "California";
 	
-	print "The dog’s name is {$dog1->getName()}.";
+	print " {$dog1->getName()}.";
 	//
+
+	/*Lecture 2 Example 1*/
+	class House {
+		public $city;
+		public $state;
+		public $street;
+
+			function_construct($title, $city, $state, $street){
+				$this->city = $city;
+				$this->state = $state;
+				$this->street = $street;
+			}
+
+			function getCity(){
+				return "{$this->city}" .
+				"{$this->state}";
+			}
+	}
+
+	class Animal {
+		public $species;
+		public $habitat;
+		public $type;
+
+			function_construct($title, $species, $habitat, $type){
+				$this->species = $species;
+				$this->habitat = $habitat;
+				$this->type = $type;
+			}
+
+			function getSpecies(){
+				return "{$this->species}" .
+				"{$this->type}";
+			}
+	}
+
+	class Shirt {
+		public $size;
+		public $style;
+		public $store;
+
+			function_construct($title, $size, $style, $store){
+				$this->city = $size;
+				$this->state = $style;
+				$this->street = $store;
+			}
+
+			function getSize(){
+				return "{$this->size}" .
+				"{$this->style}";
+			}
+	}
+
+	/*Example 2*/
+	$house1 = new House("Sierra Madre", "California", "auburn");
+	print"House 1:{$house1->getCity()}\n;
+
+	$animal1 = new Animal("snake", "forest", "reptile");
+	print"Animal 1:{$animal1->getSpecies()}\n;
+
+	$shirt = new Shirt("medium", "long sleeve", "pacsun");
+	print"Shirt 1:{$shirt1->getSize()}\n;
 ?>
