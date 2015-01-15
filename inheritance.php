@@ -81,6 +81,7 @@
 		function __construct($title, $category, $theater, $rating) {
 			parent::__construct($title, $category, $theater);
 		$this->rating = $rating;
+		}
 		function restriction() {
 			return $this->rating;
 		}
@@ -118,6 +119,7 @@
 		function __construct($name, $creator, $group, $power, $personality, $awesomeness) {
 			parent::__construct($name, $creator, $group, $personality, $awesomeness);
 		$this->power = $power;
+		}
 		function awesome() {
 			return $this->power;
 		}
@@ -127,6 +129,7 @@
 		function __construct($name, $creator, $group, $weapons, $personality, $awesomeness) {
 			parent::__construct($name, $creator, $group, $personality, $awesomeness);
 		$this->weapons = $weapons;
+		}
 		function ouch() {
 			return $this->weapons;
 		}

@@ -91,15 +91,15 @@
 		public $state;
 		public $street;
 
-			function_construct($title, $city, $state, $street){
+			function __construct($title, $city, $state, $street){
 				$this->city = $city;
 				$this->state = $state;
 				$this->street = $street;
 			}
 
 			function getCity(){
-				return "{$this->city}" .
-				"{$this->state}";
+				return $this->city .
+				$this->state;
 			}
 	}
 
@@ -108,15 +108,15 @@
 		public $habitat;
 		public $type;
 
-			function_construct($title, $species, $habitat, $type){
+			function __construct($species, $habitat, $type){
 				$this->species = $species;
 				$this->habitat = $habitat;
 				$this->type = $type;
 			}
 
 			function getSpecies(){
-				return "{$this->species}" .
-				"{$this->type}";
+				return $this->species .
+				$this->type;
 			}
 	}
 
@@ -125,25 +125,25 @@
 		public $style;
 		public $store;
 
-			function_construct($title, $size, $style, $store){
+			function __construct($title, $size, $style, $store){
 				$this->city = $size;
 				$this->state = $style;
 				$this->street = $store;
 			}
 
 			function getSize(){
-				return "{$this->size}" .
-				"{$this->style}";
+				return $this->size .
+				$this->style;
 			}
 	}
 
 	/*Example 2*/
 	$house1 = new House("Sierra Madre", "California", "auburn");
-	print"House 1:{$house1->getCity()}\n;
+	print "House 1: " . $house1->getCity();
 
 	$animal1 = new Animal("snake", "forest", "reptile");
-	print"Animal 1:{$animal1->getSpecies()}\n;
+	print "Animal 1: " . $animal1->getSpecies();
 
 	$shirt = new Shirt("medium", "long sleeve", "pacsun");
-	print"Shirt 1:{$shirt1->getSize()}\n;
+	print"Shirt 1: " . $shirt1->getSize();
 ?>
